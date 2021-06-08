@@ -2,4 +2,5 @@
     <string name="app_name">Demo Dynamic ListView Color List</string>
     <string name="enter_new_colour">Enter new colour</string>
     <string name="btnAddColour">Add New Colour</string>
+    <string name="enter_position_number">Enter position number</string>
 </resources>

@@ -14,6 +14,7 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity {
 
     EditText etElement;
+    EditText etIndexElement;
     Button btnAdd;
     ListView lvColour;
     ArrayList<String> alColours;
@@ -24,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         etElement=findViewById(R.id.editTextColour);
+        etIndexElement=findViewById(R.id.editTextIndex);
         btnAdd=findViewById(R.id.buttonAddItem);
         lvColour=findViewById(R.id.listViewColour);
 
@@ -38,7 +40,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String newColour = etElement.getText().toString();
-                alColours.add(newColour);
+                int pos = Integer.parseInt(etIndexElement.getText().toString());
+                alColours.add(pos, newColour);
 
                 aaColour.notifyDataSetChanged();
             }
